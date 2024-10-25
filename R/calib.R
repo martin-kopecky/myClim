@@ -19,17 +19,17 @@ mc_const_CALIB_MOIST_WCOR_T <- 0.64108
 #'
 #' @description
 #' Specialized function for calibration of TOMST TMS moisture sensor.
-#' Function calculate correction parameters for individual logger (slope and intercept)
+#' Function calculates correction parameters (slope and intercept) for each individual logger
 #' from TMS moisture measurements in demineralized water and dry air.
 #'
 #' @details
 #' This function calculate calibration parameters `cor_factor` and `cor_intercept`
 #' accounting for individual differencies in TMS moisture sensor signal in air and in water against reference
-#' loggers which were used for estimation of parameters of soil VWC conversion curves.
+#' loggers which were used for estimation of parameters of soil VWC calibration curves.
 #' These parameters must be loaded into myClim object [myClim::mc_prep_calib_load()]
 #' prior to calling [myClim::mc_calc_vwc()].
-#' Parameters for soils available in my_Clim were derived for TMS3 logger version, with slightly different typical air and water signal.
-#' Correction parameters for TMS4 loggers therefore can be expected in the range of values:
+#' Calibration parameters provided in Wild et al. (2019) were derived for TMS3 logger and TMS3 and TMS4 have different typical air and water signal.
+#' Correction parameters for TMS4 loggers can be expected in the range of values:
 #' cor_factor = (-150; -450) and cor_slope = (100, 450)
 #'
 #'
